@@ -21,7 +21,7 @@ export default function Register() {
   const googleRegisterSuccess = (data) => {
     const { email, given_name, family_name, sub } = jwt_decode(data.credential);
     axios
-      .post("http://localhost:5000/user/register", {
+      .post("https://b-store.onrender.com/user/register", {
         firstName: given_name,
         lastName: family_name,
         email: email,
@@ -56,7 +56,7 @@ export default function Register() {
     }
 
     axios
-      .post("http://localhost:5000/user/register", {
+      .post("https://b-store.onrender.com/user/register", {
         firstName: e.target[0].value,
         lastName: e.target[1].value,
         email: e.target[2].value,

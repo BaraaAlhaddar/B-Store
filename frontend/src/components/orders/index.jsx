@@ -7,7 +7,7 @@ export default function Orders() {
   const [orders, setOrders] = useState([]);
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/order`, {
+      .get(`https://b-store.onrender.com/order`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((result) => {
@@ -76,7 +76,7 @@ export default function Orders() {
                         onClick={(e) => {
                           axios
                             .put(
-                              `http://localhost:5000/order/${order._id}`,
+                              `https://b-store.onrender.com/order/${order._id}`,
                               {
                                 shipping: true,
                                 successfulPayment: true,
@@ -107,9 +107,12 @@ export default function Orders() {
                   <Button
                     onClick={(e) => {
                       axios
-                        .delete(`http://localhost:5000/order/${order._id}`, {
-                          headers: { Authorization: `Bearer ${token}` },
-                        })
+                        .delete(
+                          `https://b-store.onrender.com/order/${order._id}`,
+                          {
+                            headers: { Authorization: `Bearer ${token}` },
+                          }
+                        )
                         .then((result) => {
                           setOrders(
                             orders.filter((e) => {

@@ -15,7 +15,7 @@ export default function Home() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/category`)
+      .get(`https://b-store.onrender.com/category`)
       .then((result) => {
         setCategories(result.data.categories);
         localStorage.setItem(
@@ -23,7 +23,7 @@ export default function Home() {
           JSON.stringify(result.data.categories)
         );
         axios
-          .get(`http://localhost:5000/product`)
+          .get(`https://b-store.onrender.com/product`)
           .then((result) => {
             setProducts(result.data.products);
             localStorage.setItem(

@@ -13,7 +13,7 @@ export default function SearchPage() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/product/search/${name}`)
+      .get(`https://b-store.onrender.com/product/search/${name}`)
       .then((result) => {
         setNoResults(false);
         setSearchResult(result.data.products);

@@ -28,7 +28,7 @@ export default function UpdateUser() {
     }
     axios
       .put(
-        `http://localhost:5000/user/${userId}`,
+        `https://b-store.onrender.com/user/${userId}`,
         {
           firstName: e.target[0].value,
           lastName: e.target[1].value,

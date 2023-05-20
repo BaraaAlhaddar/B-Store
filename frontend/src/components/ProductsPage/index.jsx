@@ -12,7 +12,7 @@ export default function ProductsPage() {
   const [lastPage, setLastPage] = useState(0);
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/product?from=${page}`)
+      .get(`https://b-store.onrender.com/product?from=${page}`)
       .then((result) => {
         if (result.data.products) {
           setProducts(result.data.products);

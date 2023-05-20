@@ -28,7 +28,7 @@ export default function Login() {
     console.log(jwt_decode(data.credential));
     const { email, sub } = jwt_decode(data.credential);
     axios
-      .post("http://localhost:5000/user/login", {
+      .post("https://b-store.onrender.com/user/login", {
         email: email,
         password: sub,
       })
@@ -61,7 +61,7 @@ export default function Login() {
       return setLoginErrorMsg("Your Email is incorrect");
     }
     axios
-      .post("http://localhost:5000/user/login", {
+      .post("https://b-store.onrender.com/user/login", {
         email: e.target[0].value,
         password: e.target[1].value,
       })

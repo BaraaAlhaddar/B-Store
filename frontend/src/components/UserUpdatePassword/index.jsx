@@ -24,7 +24,7 @@ export default function UserUpdatePassword() {
               }
               axios
                 .put(
-                  `http://localhost:5000/user/${userId}`,
+                  `https://b-store.onrender.com/user/${userId}`,
                   {
                     password: e.target[0].value,
                   },

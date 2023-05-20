@@ -77,7 +77,7 @@ export default function CreateProduct() {
                 ) {
                   axios
                     .post(
-                      `http://localhost:5000/product`,
+                      `https://b-store.onrender.com/product`,
                       {
                         label: e.target[0].value,
                         brand: e.target[1].value,
@@ -116,7 +116,7 @@ export default function CreateProduct() {
                 } else if (pickedCategory.categoryName === "Laptops") {
                   axios
                     .post(
-                      `http://localhost:5000/product`,
+                      `https://b-store.onrender.com/product`,
                       {
                         label: e.target[0].value,
                         brand: e.target[1].value,
@@ -150,7 +150,7 @@ export default function CreateProduct() {
                 } else {
                   axios
                     .post(
-                      `http://localhost:5000/product`,
+                      `https://b-store.onrender.com/product`,
                       {
                         label: e.target[0].value,
                         brand: e.target[1].value,

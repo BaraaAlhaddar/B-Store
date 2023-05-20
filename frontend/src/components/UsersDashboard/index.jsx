@@ -10,7 +10,7 @@ export default function UsersDashboard() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/user`, {
+      .get(`https://b-store.onrender.com/user`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((result) => {
@@ -80,9 +80,12 @@ export default function UsersDashboard() {
                       variant="danger"
                       onClick={(e) => {
                         axios
-                          .delete(`http://localhost:5000/user/${user._id}`, {
-                            headers: { Authorization: `Bearer ${token}` },
-                          })
+                          .delete(
+                            `https://b-store.onrender.com/user/${user._id}`,
+                            {
+                              headers: { Authorization: `Bearer ${token}` },
+                            }
+                          )
                           .then((result) => {
                             setUsers(users.filter((e) => e._id !== user._id));
                             handleClose();

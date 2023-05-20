@@ -22,7 +22,7 @@ export default function Product() {
   const [productData, setProductData] = useState({});
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/product/${id}`)
+      .get(`https://b-store.onrender.com/product/${id}`)
       .then((result) => {
         setProductData(result.data.product);
         setReviews(result.data.product.reviews);
@@ -188,7 +188,7 @@ export default function Product() {
                       e.preventDefault();
                       axios
                         .put(
-                          `http://localhost:5000/product/review/${id}`,
+                          `https://b-store.onrender.com/product/review/${id}`,
                           {
                             rate: value,
                             comment: e.target[0].value,
@@ -267,7 +267,7 @@ export default function Product() {
                           onClick={(e) => {
                             axios
                               .put(
-                                `http://localhost:5000/product/review2/${review._id}`,
+                                `https://b-store.onrender.com/product/review2/${review._id}`,
                                 {
                                   _id: productData._id,
                                 },

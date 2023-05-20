@@ -51,7 +51,7 @@ export default function NavbarMenu() {
   };
   const accountFunc = () => {
     axios
-      .get("http://localhost:5000/user/userData", {
+      .get("https://b-store.onrender.com/user/userData", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((result) => {

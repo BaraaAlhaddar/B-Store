@@ -14,7 +14,7 @@ export default function CategoryPage() {
   const [lastPage, setLastPage] = useState(0);
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/product/category/${id}?from=${page}`)
+      .get(`https://b-store.onrender.com/product/category/${id}?from=${page}`)
       .then((result) => {
         if (result.data.products) {
           setCategoryProducts(result.data.products);

@@ -12,7 +12,7 @@ export default function ProductsDashboard() {
   const handleCloseUpdate = () => setShowUpdate(false);
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/product/admin`, {
+      .get(`https://b-store.onrender.com/product/admin`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((result) => {
@@ -92,7 +92,7 @@ export default function ProductsDashboard() {
                       onClick={(e) => {
                         axios
                           .delete(
-                            `http://localhost:5000/product/${product._id}`,
+                            `https://b-store.onrender.com/product/${product._id}`,
                             {
                               headers: { Authorization: `Bearer ${token}` },
                             }
@@ -127,7 +127,7 @@ export default function ProductsDashboard() {
                         e.preventDefault();
                         axios
                           .put(
-                            `http://localhost:5000/product/${product._id}`,
+                            `https://b-store.onrender.com/product/${product._id}`,
                             {
                               label: e.target[0].value,
                               brand: e.target[1].value,

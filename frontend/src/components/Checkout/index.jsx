@@ -462,7 +462,7 @@ export default function Checkout() {
                   onClick={(e) => {
                     axios
                       .post(
-                        `http://localhost:5000/order`,
+                        `https://b-store.onrender.com/order`,
                         {
                           user: userId,
                           orders: cart.map((e) => e._id),
@@ -530,7 +530,7 @@ style={{
   onClick={(e) => {
     axios
       .post(
-        `http://localhost:5000/order`,
+        `https://b-store.onrender.com/order`,
         {
           user: userId,
           orders: cart.map((e) => e._id),

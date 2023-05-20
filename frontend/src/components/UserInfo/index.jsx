@@ -97,7 +97,7 @@ export default function UserInfo() {
             variant="danger"
             onClick={(e) => {
               axios
-                .delete(`http://localhost:5000/user/${userId}`, {
+                .delete(`https://b-store.onrender.com/user/${userId}`, {
                   headers: { Authorization: `Bearer ${token}` },
                 })
                 .then(() => {

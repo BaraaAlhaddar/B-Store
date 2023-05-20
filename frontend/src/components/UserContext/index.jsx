@@ -29,7 +29,7 @@ const UserContextProvider = ({ children }) => {
     if (isLoggedIn) {
       axios
         .put(
-          `http://localhost:5000/user/cart/${id}`,
+          `https://b-store.onrender.com/user/cart/${id}`,
           {},
           {
             headers: { Authorization: `Bearer ${token}` },
@@ -47,7 +47,7 @@ const UserContextProvider = ({ children }) => {
     if (isLoggedIn) {
       axios
         .put(
-          `http://localhost:5000/user/cart2/${id}`,
+          `https://b-store.onrender.com/user/cart2/${id}`,
           {},
           {
             headers: { Authorization: `Bearer ${token}` },
